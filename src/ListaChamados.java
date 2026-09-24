@@ -23,7 +23,7 @@ public class ListaChamados {
         atual.setNext(chamado);
     }
 
-    public void ExibirChamados(){
+    public void exibirChamados(){
         if(head == null){
             System.out.println("Nenhum chamado foi encontrado.");
             return;
@@ -52,7 +52,33 @@ public class ListaChamados {
         System.out.println("Chamado " + codigo + " não encontrado.");
     }
 
-    public void remover(){}
+    public void remover(int codigo){
+        if (head == null) {
+            System.out.println("Lista vazia.");
+            return;
+        }
+
+        if (head.getCodigo() == codigo) {
+            head = head.getNext();
+            System.out.println("Chamado " + codigo + " removido.");
+            return;
+        }
+
+        NoChamado anterior = head;
+        NoChamado atual = head.getNext();
+        while (atual != null) {
+            if (atual.getCodigo() == codigo) {
+                anterior.setNext(atual.getNext());
+                System.out.println("Chamado " + codigo + " removido.");
+                return;
+            }
+            anterior = atual;
+            atual = atual.getNext();
+        }
+
+        System.out.println("Chamado " + codigo + " não encontrado.");
+    }
+    //A referência alterada foi o next do nó 103, o nó anterior ao 107.
 
     @Override
     public String toString() {

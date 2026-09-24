@@ -17,8 +17,12 @@ public class Main {
         lista.inserirFim(chamado4);
         lista.inserirInicio(chamado5);
 
-        lista.ExibirChamados();
+        //lista.exibirChamados();
+
         lista.buscar(112);
         lista.buscar(999);
+
+        lista.remover(107);
+        lista.exibirChamados();
     }
 }
