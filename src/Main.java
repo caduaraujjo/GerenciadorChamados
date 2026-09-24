@@ -17,6 +17,6 @@ public class Main {
         lista.inserirFim(chamado4);
         lista.inserirInicio(chamado5);
 
-        System.out.println("Lista de Chamados: " + lista);
+        lista.ExibirChamados();
     }
 }

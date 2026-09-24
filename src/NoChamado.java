@@ -48,7 +48,9 @@ public class NoChamado {
 
     @Override
     public String toString() {
-        return "codigo=" + codigo +
-                ", next=" + next;
+        return "codigo: " + codigo +
+               "/n" +   "Solicitante: " + Solicitante +
+                "/n" + "Problema: " + problema +
+                "/n" + "next: " + next +"/n";
     }
 }

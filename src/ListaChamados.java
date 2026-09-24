@@ -23,7 +23,22 @@ public class ListaChamados {
         atual.setNext(chamado);
     }
 
-    public void ExibirChamados(){}
+    public void ExibirChamados(){
+        if(head == null){
+            System.out.println("Nenhum chamado foi encontrado.");
+            return;
+        }
+
+        NoChamado atual = head;
+        while(atual != null){
+            System.out.println("Código: " + atual.getCodigo());
+            System.out.println("Solicitante: " + atual.getSolicitante());
+            System.out.println("Problema: " + atual.getProblema());
+            System.out.println("------------------------------------------------");
+            atual = atual.getNext();
+        }
+
+    }
 
     public void buscar(){}
 
