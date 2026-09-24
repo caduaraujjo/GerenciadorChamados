@@ -45,4 +45,10 @@ public class NoChamado {
     public void setNext(NoChamado next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return "codigo=" + codigo +
+                ", next=" + next;
+    }
 }
