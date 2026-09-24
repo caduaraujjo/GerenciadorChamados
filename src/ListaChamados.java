@@ -40,7 +40,17 @@ public class ListaChamados {
 
     }
 
-    public void buscar(){}
+    public void buscar(int codigo){
+        NoChamado atual = head;
+        while(atual != null){
+            if(atual.getCodigo() == codigo){
+                System.out.println("Chamado " + codigo + " encontrado.");
+                return;
+            }
+            atual = atual.getNext();
+        }
+        System.out.println("Chamado " + codigo + " não encontrado.");
+    }
 
     public void remover(){}
 

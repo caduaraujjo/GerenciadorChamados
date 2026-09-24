@@ -18,5 +18,7 @@ public class Main {
         lista.inserirInicio(chamado5);
 
         lista.ExibirChamados();
+        lista.buscar(112);
+        lista.buscar(999);
     }
 }
